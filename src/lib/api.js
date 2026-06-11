@@ -12,6 +12,9 @@ export const api = axios.create({
   },
 });
 
+// Allow sending cookies/credentials to the API when required
+api.defaults.withCredentials = true;
+
 // Request interceptor to add token
 api.interceptors.request.use(
   (config) => {
