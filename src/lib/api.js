@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Use full backend URL instead of relative path
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://r2f.vercel.app/api';
+// Use same-origin API path by default to avoid CORS issues in preview/deployed builds.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 console.log('API Base URL:', API_BASE_URL);
 
