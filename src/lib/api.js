@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// Use same-origin API path by default to avoid CORS issues in preview/deployed builds.
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 console.log('API Base URL:', API_BASE_URL);
@@ -48,7 +47,6 @@ api.interceptors.response.use(
         url: error.config?.url
       });
       
-      // Handle specific error codes
       if (error.response.status === 401) {
         localStorage.removeItem('preproute_token');
         localStorage.removeItem('preproute_user');

@@ -1,12 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "vite --host 0.0.0.0",
-  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://r1-pi-eosin.vercel.app/api/$1"
+      "destination": "https://r2f.vercel.app/api/$1"
     },
     {
       "source": "/(.*)",
